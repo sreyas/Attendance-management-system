@@ -1,0 +1,37 @@
+<div class="row">
+<a href ="/users/adduser" class ="btn btn-default" >New User</a>
+
+<div class="col s12">
+         <table id="example" class="mdl-data-table" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+      <th>Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Actions</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+   {{#each users}}
+        <tr>
+           <td>{{ name }}</td>
+           <td >{{ email }}</td>
+           <td >{{ username }}</td>
+            <td><a  href="/users/user/{{_id}}/edit" class="waves-effect waves-light btn btn-small blue"><i class="material-icons left">edit</i>Edit</a>
+ <a  href="/users/user/{{_id}}/delete" class="waves-effect waves-light btn btn-small red"><i class="material-icons left">delete</i>Delete</a>
+</td>         
+        </tr>
+{{/each}} 
+              
+    </tbody>
+</table>
+           
+</div>
+    </div>
+
+
+
+
+

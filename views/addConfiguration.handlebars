@@ -1,0 +1,20 @@
+﻿<h2 class="page-header">Configuration</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+<div class="row">
+<div class="col s12">
+<div class ="configuresection">
+  
+<form method="post" action="/users/configuration">
+   <div class="form-group">
+    <label>Configuration url</label>
+    <input type="text" class="form-control" placeholder="Configuration url" name="configuration">
+  </div>
+   <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+</div>
+</div>

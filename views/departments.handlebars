@@ -1,0 +1,33 @@
+<div class="row">
+<a href ="/departments/add" class ="btn btn-default" >New Department</a>
+
+<div class="col s12">
+         <table id="example" class="mdl-data-table" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+      <th>Department Name</th>     
+      <th>Actions</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+   {{#each departments}}
+        <tr>
+           <td>{{ dept_name }}</td>         
+            <td><a  href="/departments/department/{{_id}}/edit" class="waves-effect waves-light btn btn-small blue"><i class="material-icons left">edit</i>Edit</a>
+ <a  href="/departments/department/{{_id}}/delete" class="waves-effect waves-light btn btn-small red"><i class="material-icons left">delete</i>Delete</a>
+</td>         
+        </tr>
+{{/each}} 
+              
+    </tbody>
+</table>
+           
+</div>
+    </div>
+
+
+
+
+

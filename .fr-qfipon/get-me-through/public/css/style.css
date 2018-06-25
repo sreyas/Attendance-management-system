@@ -1,0 +1,166 @@
+/* fallback */
+@font-face { font-family: 'Material Icons'; font-style: normal; font-weight: 400; src: url(https://fonts.gstatic.com/s/materialicons/v36/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2'); }
+.material-icons { font-family: 'Material Icons'; font-weight: normal; font-style: normal; font-size: 24px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased; }
+/* --------------- Body ------ */
+body { display: flex; min-height: 100vh; flex-direction: column; }
+body { background-image: url(../images/background-bg.jpg); background-size: cover; background-position: center center; background-repeat: no-repeat; background-attachment: fixed; }
+.label-icon {font-size: 18px;margin-bottom: 4px;vertical-align: middle; margin-right:6px;}
+
+main .sub-content { padding: 20px; }
+nav { background: none; box-shadow: none; height:auto; line-height:normal; }
+main { flex: 1 0 auto; color: #fff; }
+.sub-content:after{ content:''; display:block; clear:both;}
+.sub-content { padding: 20px; color:#fff; }
+
+.row {
+    margin-left: -0.75rem;
+	margin-right: -0.75rem;
+}
+
+
+.glassy-bg { background-color: rgba(255, 255, 255, 0.1); padding:16px; }
+.footer { margin-top: 20px; color:#fff; padding:0; }
+
+.waves-effect.waves-teal .waves-ripple{background-color:#fc3}
+/* ---------------------------- */
+@media(min-width:993px) {
+    .sub-content { margin-left: 240px; }
+    .footer { margin-top: 60px; }
+   
+}
+
+nav .button-collapse {
+    float: right;
+}
+.logo img{
+width:240px;
+}
+.side-nav li i {
+line-height: 64px;
+}
+#main-content{
+   flex: 1 0 auto;
+   color: #fff;
+}
+/*--------------------------- New css -------------------------*/
+h1, h2, h3, h4, h5, h6 {
+margin:0 0 12px;
+color:#f2f2f2;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 26px;
+}
+h3 {
+font-size: 22px;
+}
+h4 {
+font-size: 18px;
+}
+h5 {
+font-size: 16px;
+}
+h6 {
+font-size: 12px;
+}
+
+
+.form-item{
+padding-bottom:20px;
+position:relative;
+}
+
+.form-item p.msg{
+margin:0;
+font-size:13px;
+font-weight:300;
+text-align:right;
+position:absolute;
+width:100%;
+left:0;
+bottom:10px;
+
+}
+
+.form-item p.msg.error{
+color:#ef5350;
+}
+.form-item p.msg.warning {
+color:#ffc107;
+}
+
+
+.form-item p.msg.success{
+color:#8bc34a ;
+}
+
+.border-dashed {
+   border-style: dashed;
+   border-width: 2px;
+   border-color: rgba(255,255,255,0.5);
+margin-bottom:20px;
+padding:20px;
+}
+
+.round-corner {
+-webkit-border-radius: 16px;
+-moz-border-radius: 16px;
+border-radius: 16px;
+}
+
+.modal{
+-webkit-border-radius: 0;
+-moz-border-radius: 0;
+border-radius: 0;
+}
+.btn {
+box-shadow: 0 1px 3px 0 rgba(0,0,0,0.12), 0 1px 2px 0 rgba(0,0,0,0.24);
+background-color: rgba(255,255,255,0.2);
+}
+.btn:active, .btn:active:focus, .btn:active:hover, .btn:focus, .btn:hover {
+   background-color: rgba(255,255,255,0.8);
+color:#555;
+}
+.btn.btn-small { height: auto; line-height: 14px; padding: 6px 10px; font-size: 12px; }
+.btn.btn-small i { margin-right: 5px; font-size: 16px; }
+
+.img-respon {
+border: 0;
+width: 100%;
+height: auto;
+}
+table th { background: rgba(255, 255, 255, 0.2); }
+table th, table td { border-top: none; border-right: 1px solid rgba(0, 0, 0, 0.09); padding: 16px 10px; vertical-align: middle; }
+table tr { transition: 0.4s; }
+table tr:hover { background-color: rgba(245, 245, 245, 0.08); }
+table { background-color: rgba(255, 255, 255, 0.1); -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); margin:20px 0px; }
+
+.form-group{
+  padding-bottom:10px !important;
+}
+
+[type="checkbox"].filled-in:not(:checked)+label:after {
+   border: 2px solid #fff;
+}
+
+.ripple-effect{position:relative;}
+.ripple{ position: absolute; top: 0; left: 0; background:#64ffda ;width:20px; height:20px; }
+.ripple{ -webkit-animation: seconds .6s forwards; -webkit-animation-iteration-count: 1; animation: seconds .6s forwards; animation-iteration-count: 1; border-radius: 100px;  }
+@-webkit-keyframes seconds {
+ 0% { opacity: .5; }
+ 100% { opacity: 0; transform: scale(3); }
+}
+@keyframes seconds {
+ 0% { opacity: .5; }
+ 100% { opacity: 0; transform: scale(3);}
+}
+.form-checkboxes .item {
+padding: 5px 0;
+}
+.form-checkboxes .item label {
+font-size:18px;
+text-transform:capitalize;
+color:#ccc;
+}

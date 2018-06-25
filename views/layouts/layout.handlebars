@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Attendance System</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/css/materialize.min.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+<link href="/css/materialize-colorpicker.min.css" rel="stylesheet">
+<link href="/css/jquery-ui.css" rel="stylesheet">
+</head>
+<body {{#if  session.user }} class ="loggedin " {{else}} class ="notloggedin" {{/if}}>
+
+     <header>
+  <nav>
+    <div class="sub-content"> <a href="#!" class="logo"><img src="/images/logo.png"/></a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+    </div>
+  </nav>
+</header>
+{{#if  session.user }}  
+      <ul class="side-nav fixed" id="mobile-demo">
+      
+
+
+{{#ifIn "admin"  user.role }}
+<li><a href="/" class="waves-effect waves-grey"><i class="material-icons left">dashboard</i>Dashboard</a></li>
+                <li><a href="/users/listusers" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage Users</a></li>
+                <li><a href="/users/listroles" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage Roles</a></li>
+                <li><a href="/users/listusercategory" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage Categories</a></li>
+                <li><a href="/users/listconfiguration" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage Configuration</a></li>
+                <li><a href="/users/listattendances" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage Attendance</a></li>
+                <li><a href="/departments" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage Departments</a></li>
+                <li><a href="/activities" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage activicty</a></li>
+                <li><a href="/activities/clients" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Manage clients</a></li>
+                <li><a href="/departments/listshifts" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Shift Management</a></li>
+                <li><a href="/departments/listprojectsassigned" class="waves-effect waves-grey"><i class="material-icons left">verified_user</i>Projects Assigned</a></li>
+               <li><a href="/train" class="waves-effect waves-grey"><i class="material-icons left">add</i>Train</a></li>
+                <li><a href="/run" class="waves-effect waves-grey"><i class="material-icons left">add</i>Run</a></li>
+               <li><a href="/users/logout"class="waves-effect waves-grey"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+
+
+ {{else}}
+     <li><a href="/" class="waves-effect waves-grey"><i class="material-icons left">dashboard</i>Dashboard</a></li>
+     <li><a href="/users/user/{{user._id}}/edit" class="waves-effect waves-grey"><i class="material-icons left">edit</i>Edit Profile</a></li>
+    <li><a href="/users/myprojects" class="waves-effect waves-grey"><i class="material-icons left">edit</i>Myprojects</a></li>
+   <li><a href="/users/logout"class="waves-effect waves-grey"><i class="material-icons left">exit_to_app</i>Logout</a></li>
+
+{{/ifIn}}       
+
+     </ul>
+      {{/if}}
+
+
+<div class="sub-content" id="main-content">
+
+
+          {{#if success_msg}}
+            <div class="alert alert-success">{{success_msg}}</div>
+          {{/if}}
+
+          {{#if error_msg}}
+            <div class="alert alert-danger">{{error_msg}}</div>
+          {{/if}}
+
+          {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+          {{/if}}
+          
+          {{{body}}}
+
+
+
+</div>
+<footer>
+ <div class="footer glassy-bg">
+       <div class="footer-content sub-content">
+     <div class="right"><a href ="http://sreyas.com/"><img src="/images/sreyaslogo.png"/> </a></div>
+      <div class="left"><a href ="http://acusysdesigns.com/"><img src="/images/acusylogo.png"/> </a> </div>
+     </div>
+ </div>
+
+</footer>
+<script type="text/javascript" src="/js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="/js/libs/materialize.min.js"></script> 
+<script type="text/javascript" src="/js/libs/jquery-ui.min.js"></script>
+
+<script src="/js/libs/materialize-colorpicker.min.js"></script>
+<!--<script type="text/javascript" src="/modules/fullcalendar/fullcalendar.js"></script>-->
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js"></script>
+<script src="/js/jquery.dataTables.min.js"></script>
+<script src="/js/scripts.js"></script>
+<script type="text/javascript" src="/js/jquery.json-2.2.min.js"></script>
+<script type="text/javascript" src="/js/domcached-0.1-jquery.js"></script>
+<script type="text/javascript" src="/js/jtrack.js"></script>
+<script type="text/javascript">
+$(function () {
+	jTask.init();
+});
+</script>
+        
+
+
+</body>
+</html>

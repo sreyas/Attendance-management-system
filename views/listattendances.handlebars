@@ -1,0 +1,79 @@
+<div class ="filter_wrap"><a class="waves-effect waves-light btn modal-trigger atteendancefilter" href="#modal1">Filters <i class="button-icon text-color-aquamarine material-icons transition-smooth">filter_list</i> </a> </div>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal  modal-fixed-footer">
+    <div class="modal-content">
+     <div id ="expand_filter"><div class ="inner"> 
+     <div class ="row">
+         <div class="col s4 attendancename"> </div>
+         <div class="col s4 attendancecategory"> </div>
+         <div class="col s4 attendancedepartment"> </div>
+         <div class="col s12 attendancedate"> </div>
+     </div>
+ 
+
+
+
+
+
+</div></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat modal-filter-save">Save</a>
+    </div>
+  </div>
+<div class="row">
+<div class="col s12">
+         <table id="attendance" class="mdl-data-table" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+     <th class="select-filter">Name</th> 
+      <th>Year</th>        
+      <th>Month</th>  
+      <th class ="select-timepicker">Time</th>    
+      <th>Day</th> 
+      <th class ="select-datepicker" style ="display:none">Date</th>       
+      <th class="select-category-filter" style ="display:none">Category</th> 
+       <th class="select-department-filter" style ="display:none">Department</th>          
+        </tr>
+    </thead>
+
+    <tbody>
+
+
+
+
+   {{#each profiledetails}}
+
+
+        <tr>   
+           <td> {{username}} </td>        
+           <td >{{date date_time "YYYY"}}</td>           
+            <td >{{date date_time  "MMMM"}}</td>            						
+            <td >{{date date_time "H:mm"}}</td>
+            <td style ="display:none">{{date date_time "DD-MMM-YYYY H:mm:ss"}}</td>    
+            <td >{{date date_time "dddd MMMM DD "}}</td>
+            <td style ="display:none" >{{category}}</td>
+            <td style ="display:none">{{department}}</td>
+        </tr>
+{{/each}} 
+
+    </tbody>
+
+</table>
+           
+</div>
+    </div>
+
+
+
+
+
+ 
+  
+
+
+
+
+          

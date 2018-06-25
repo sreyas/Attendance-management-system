@@ -1,0 +1,50 @@
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Filters <i class="button-icon text-color-aquamarine material-icons transition-smooth">filter_list</i> </a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal  modal-fixed-footer">
+    <div class="modal-content">
+     <div id ="expand_filter_shiftlist"><div class ="inner"> </div></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat modal-filter-save">Save</a>
+    </div>
+  </div>
+
+<div class="row">
+<a href ="/departments/projectsassigned" class ="btn btn-default" >Add projects </a>
+
+<div class="col s12">
+         <table id="shiftstable" class="mdl-data-table" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+      <th class ="select-filter"> EmployeeName</th>     
+      <th class ="select-filter"> Client Name</th>    
+      <th > Date </th>    
+      <th class ="select-filter"> Category</th>    
+      <th class ="select-filter"> SubCategory</th>    
+      <th>Actions</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+   {{#each projects}}
+        <tr>
+           <td>{{  employee_id }}</td>    
+           <td>{{   clientid }}</td>         
+           <td>{{  shift_date_start }}</td>         
+           <td>{{    main_category }}</td>   
+           <td>{{    sub_category }}</td>                   
+            <td><a  href="/departments/projectsassigned/{{_id}}/edit" class="waves-effect waves-light btn btn-small blue"><i class="material-icons left">edit</i>Edit</a>
+ <a  href="/departments/projectsassigned/{{_id}}/delete" class="waves-effect waves-light btn btn-small red"><i class="material-icons left">delete</i>Delete</a>
+</td>         
+        </tr>
+{{/each}} 
+              
+    </tbody>
+</table>
+           
+</div>
+    </div>
+

@@ -1,0 +1,19 @@
+<div class="row">
+<div class="col s12">
+<div class="glassy-bg">
+ <form method="post" action="/users/category/{{category._id}}">
+
+   <div class="form-group">
+    <label>Name</label>
+    <input type="text" class="form-control" value = "{{category.Category}}" name="categoryname">
+  </div>
+  <div class="form-group">
+    <label>Color</label>
+    <input type="text"  id="categorycolor" class="form-control" value = "{{category.color}}" name="categorycolor">
+  </div>
+  <button type="submit" class="btn btn-default">Update</button>
+</form>
+</div>
+</div>
+</div>
+

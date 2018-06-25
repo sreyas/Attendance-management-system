@@ -1,0 +1,56 @@
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Filters <i class="button-icon text-color-aquamarine material-icons transition-smooth">filter_list</i> </a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal  modal-fixed-footer">
+    <div class="modal-content">
+     <div id ="expand_filter_userlist"><div class ="inner"> </div></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>
+       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat modal-filter-save">Save</a>
+    </div>
+  </div>
+
+<div class="row">
+<a href ="/users/adduser" class ="btn btn-default" >New User</a>
+
+<div class="col s12">
+         <table id="userstable" class="mdl-data-table" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+      <th class ="select-filter">Name</th>
+                        <th>Email</th>
+                        <th>Username</th>
+       <th class ="category-filter" style ="display:none;">Category</th>
+        <th class ="department-filter" style ="display:none;">Department</th>
+                        <th>Actions</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+
+   {{#each users}}
+        
+        <tr>
+           <td>{{ user.name }}</td>
+           <td >{{ user.email }}</td>
+           <td >{{ user.username }}</td>
+            <td style ="display:none;">{{ category.Category}}</td>
+            <td style ="display:none;">{{ department.dept_name}}</td>
+            <td><a  href="/users/user/{{user._id}}/edit" class="waves-effect waves-light btn btn-small blue"><i class="material-icons left">edit</i>Edit</a>
+ <a  href="/users/user/{{_id}}/delete" class="waves-effect waves-light btn btn-small red"><i class="material-icons left">delete</i>Delete</a>
+</td>         
+        </tr>
+{{/each}} 
+              
+    </tbody>
+</table>
+           
+</div>
+    </div>
+
+
+
+
+

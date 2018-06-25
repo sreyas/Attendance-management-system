@@ -1,0 +1,28 @@
+<div class="row">
+<div class="col s12">
+<div class="manage-role">
+  <h1> MY projects </h1>
+   <table id="myprojects" class="mdl-data-table" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+      <th> Client Name</th>  
+       <th>  Date Assigned</th>     
+      <th>  Date Start</th>    
+      <th> Stop</th>   
+      <th> Time </th> 
+</tr>
+{{myprojects}}
+  {{#each myprojects}}
+ <tr class="myprojectslist">
+<td class="jtrack-task-name" data-cli="{{clientid}}">{{clientid}}</td>
+<td>{{shift_date_start}}</td>
+<td>ds</td>
+<td class="starttimer-{{clientid}}"></td>
+<td class="starttimertext-{{clientid}}"></td>
+ </tr>
+{{/each}} 
+   </table>
+</div>
+</div>
+</div>
+

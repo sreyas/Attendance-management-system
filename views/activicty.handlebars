@@ -1,0 +1,33 @@
+<div class="row">
+<a href ="/activities/add" class ="btn btn-default" >New Activicty</a>
+
+<div class="col s12">
+         <table id="example" class="mdl-data-table" width="100%" cellspacing="0">
+    <thead>
+        <tr>
+      <th>Activicty Name</th>     
+      <th>Actions</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+   {{#each activicty}}
+        <tr>
+           <td>{{ activicty_name }}</td>         
+            <td><a  href="/activities/activicty/{{_id}}/edit" class="waves-effect waves-light btn btn-small blue"><i class="material-icons left">edit</i>Edit</a>
+ <a  href="/activities/activicty/{{_id}}/delete" class="waves-effect waves-light btn btn-small red"><i class="material-icons left">delete</i>Delete</a>
+</td>         
+        </tr>
+{{/each}} 
+              
+    </tbody>
+</table>
+           
+</div>
+    </div>
+
+
+
+
+

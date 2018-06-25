@@ -1,0 +1,53 @@
+<h2 class="page-header">Add projects to user</h2>
+{{#if errors}}
+      {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+{{/if}}
+
+<div class="row">
+<div class="col s12">
+<div class ="rolesection">     
+
+<form method="POST" action="/departments/projectsassigned">
+    <div class="form-group">
+    <label>Choose your Employees</label>
+    <select name ="employees_schedule" id= "employees_schedule">
+         <option value=""disabled selected>Choose your Employees</option>
+         {{#each users}}         
+         <option value="{{_id}}">{{name}}</option>
+{{/each}}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label>Date start</label>   
+      <input type="date" class="datepicker" name ="employee_shift_date_start">
+  </div>  
+  <div class ="row fieldgroup">
+      <div class="col s2">
+          <select name ="activity_category" id= "activity_category" >
+           <option value=""disabled selected>Select Main Category</option>    
+           {{#each activicty}}
+           <option value="{{_id}}">{{ activicty_name}}</option>{{/each}}
+          </select>
+       </div>
+      <div class="col s2">
+           <select name ="activity_subcategory" id= "activity_subcategory" >
+           <option value=""disabled selected>Select Sub Category</option>    
+          </select>
+       </div>
+      <div class="col s2">
+          <select name ="activity_clients" id= "activity_clients" >
+           <option value=""disabled selected>Select Clients</option>
+            {{#each clients}}
+           <option value="{{_id}}">{{ clients_name}}</option>{{/each}}    
+          </select>
+      </div>
+</div>
+  
+   <button type="submit" class="btn btn-default">Submit</button>
+</form>
+</div>
+</div>
+</div>
